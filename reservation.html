@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>کافه تلخین | رزرو میز</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="background-overlay"></div>
+
+    <main class="reservation-page">
+
+        <header class="reservation-header">
+
+            <a href="index.html" class="back-link">
+                <i class="fa-solid fa-arrow-right"></i>
+                بازگشت به صفحه ورود
+            </a>
+
+            <div class="reservation-brand">
+                <i class="fa-solid fa-mug-hot"></i>
+                <span>کافه تلخین</span>
+            </div>
+
+        </header>
+
+        <section class="reservation-card">
+
+            <div class="reservation-icon">
+                <i class="fa-regular fa-calendar-check"></i>
+            </div>
+
+            <h1>رزرو میز</h1>
+
+            <p class="reservation-subtitle">
+                لحظات زیبای خود را در کافه تلخین رزرو کنید.
+            </p>
+
+            <form id="reservationForm">
+
+                <div class="reservation-grid">
+
+                    <div class="reservation-group">
+                        <label for="fullName">نام و نام خانوادگی</label>
+                        <div class="reservation-input">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="text" id="fullName"
+                                placeholder="نام خود را وارد کنید" required>
+                        </div>
+                    </div>
+
+                    <div class="reservation-group">
+                        <label for="mobile">شماره موبایل</label>
+                        <div class="reservation-input">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            <input type="tel" id="mobile"
+                                placeholder="09xxxxxxxxx" required>
+                        </div>
+                    </div>
+
+                    <div class="reservation-group">
+                        <label for="date">تاریخ رزرو</label>
+                        <div class="reservation-input">
+                            <i class="fa-regular fa-calendar"></i>
+                            <input type="date" id="date" required>
+                        </div>
+                    </div>
+
+                    <div class="reservation-group">
+                        <label for="time">ساعت رزرو</label>
+                        <div class="reservation-input">
+                            <i class="fa-regular fa-clock"></i>
+                            <input type="time" id="time" required>
+                        </div>
+                    </div>
+
+                    <div class="reservation-group">
+                        <label for="guests">تعداد نفرات</label>
+                        <div class="reservation-input">
+                            <i class="fa-solid fa-users"></i>
+                            <select id="guests" required>
+                                <option value="">انتخاب کنید</option>
+                                <option value="1">۱ نفر</option>
+                                <option value="2">۲ نفر</option>
+                                <option value="3">۳ نفر</option>
+                                <option value="4">۴ نفر</option>
+                                <option value="5">۵ نفر</option>
+                                <option value="6">۶ نفر</option>
+                            </select>
+                        </div>
+                    </div>
+
+                 
+<div class="reservation-group">
+    <label>محل نشستن را روی نقشه انتخاب کنید</label>
+
+    <div class="cafe-map floor-plan">
+
+    <!-- عنوان نقشه -->
+    <div class="plan-title">
+        <i class="fa-solid fa-mug-hot"></i>
+        <span>CAFE TALKHIN</span>
+    </div>
+
+    <!-- پنجره ها -->
+    <div class="plan-windows">
+        <i class="fa-solid fa-window-maximize"></i>
+        <span>پنجره های کافه</span>
+        <i class="fa-solid fa-window-maximize"></i>
+    </div>
+
+    <!-- فضای داخلی -->
+    <button type="button"
+        class="map-area plan-inside"
+        data-area="inside">
+
+        <span class="plan-zone-title">فضای داخلی</span>
+
+        <div class="plan-furniture">
+            <i class="fa-solid fa-couch"></i>
+            <i class="fa-solid fa-chair"></i>
+            <i class="fa-solid fa-chair"></i>
+        </div>
+
+        <span class="plan-zone-caption">فضایی دنج و آرام</span>
+    </button>
+
+    <!-- کنار پنجره -->
+    <button type="button"
+        class="map-area plan-window"
+        data-area="window">
+
+        <span class="plan-zone-title">کنار پنجره</span>
+
+        <div class="plan-furniture">
+            <i class="fa-solid fa-mug-hot"></i>
+            <i class="fa-solid fa-chair"></i>
+        </div>
+
+        <span class="plan-zone-caption">با چشم انداز زیبا</span>
+    </button>
+
+    <!-- کانتر -->
+    <div class="plan-counter">
+        <i class="fa-solid fa-mug-hot"></i>
+        <span>COFFEE BAR</span>
+    </div>
+
+    <!-- فضای بیرونی -->
+    <button type="button"
+        class="map-area plan-outside"
+        data-area="outside">
+
+        <span class="plan-zone-title">فضای بیرونی</span>
+
+        <div class="plan-furniture">
+            <i class="fa-solid fa-tree"></i>
+            <i class="fa-solid fa-chair"></i>
+            <i class="fa-solid fa-chair"></i>
+        </div>
+
+        <span class="plan-zone-caption">در کنار طبیعت</span>
+    </button>
+
+    <!-- ورودی -->
+    <div class="plan-entrance">
+        <i class="fa-solid fa-door-open"></i>
+        <span>ورودی کافه</span>
+    </div>
+
+    <!-- گیاهان تزئینی -->
+    <div class="plan-plant plant-one">
+        <i class="fa-solid fa-seedling"></i>
+    </div>
+
+    <div class="plan-plant plant-two">
+        <i class="fa-solid fa-seedling"></i>
+    </div>
+
+</div>
+
+
+<div id="areaInfo" class="area-info" style="display: none;">
+    <h4 id="areaInfoTitle"></h4>
+
+    <div class="area-info-details">
+        <div>
+            <i class="fa-solid fa-chair"></i>
+            <span>میزهای فعال:</span>
+            <strong id="areaTableCount">۰</strong>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-users"></i>
+            <span>ظرفیت پذیرش:</span>
+            <strong id="areaCapacity">۰ نفر</strong>
+        </div>
+    </div>
+</div>
+
+
+
+    <div class="reservation-input">
+        <i class="fa-solid fa-chair"></i>
+        <select id="area" required>
+            <option value="">انتخاب کنید</option>
+            <option value="inside">فضای داخلی</option>
+            <option value="outside">فضای بیرونی</option>
+            <option value="window">کنار پنجره</option>
+        </select>
+    </div>
+</div>
+
+
+                </div>
+
+                <div class="reservation-group notes-group">
+                    <label for="notes">توضیحات بیشتر (اختیاری)</label>
+                    <textarea id="notes"
+                        placeholder="اگر درخواست خاصی دارید اینجا بنویسید..."></textarea>
+                </div>
+
+                <button type="submit" class="reservation-btn">
+                    ثبت درخواست رزرو
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+
+            </form>
+
+            <p class="reservation-footer">
+                <i class="fa-solid fa-heart"></i>
+                منتظر دیدار شما در کافه تلخین هستیم.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منوی کافه | کافه تلخین</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="background-overlay"></div>
+
+    <main class="menu-page">
+
+        <header class="menu-header">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-right"></i>
+                صفحه اصلی
+            </a>
+
+            <div class="reservation-brand">
+                <i class="fas fa-mug-hot"></i>
+                <span>کافه تلخین</span>
+            </div>
+
+            <button class="cart-toggle" id="cartToggle">
+                <i class="fas fa-shopping-bag"></i>
+                سبد خرید
+                <span id="cartCount">0</span>
+            </button>
+        </header>
+
+        <section class="menu-hero">
+            <span>تجربه‌ای متفاوت از طعم قهوه</span>
+            <h1>منوی کافه تلخین</h1>
+            <p>طعم مورد علاقه‌ات را انتخاب کن و لحظاتت را دلنشین‌تر کن.</p>
+        </section>
+
+        <nav class="menu-categories">
+            <button class="category-btn active" data-category="all">همه</button>
+            <button class="category-btn" data-category="hot">قهوه گرم</button>
+            <button class="category-btn" data-category="cold">قهوه سرد</button>
+            <button class="category-btn" data-category="drink">نوشیدنی</button>
+            <button class="category-btn" data-category="dessert">دسر</button>
+        </nav>
+
+        <section class="menu-products" id="menuProducts">
+
+            <article class="menu-product" data-category="hot">
+                <img src="assets/images/Espresso.png"
+                     alt="اسپرسو">
+                <div class="product-info">
+                    <span class="product-category">قهوه گرم</span>
+                    <h3>اسپرسو</h3>
+                    <p>قهوه خالص با عطر و طعمی ماندگار</p>
+                    <div class="product-bottom">
+                        <strong>۸۵,۰۰۰ تومان</strong>
+                        <button class="add-to-cart" data-name="اسپرسو" data-price="85000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-product" data-category="hot">
+                <img src="assets/images/cuppocino.jfif"
+                     alt="کاپوچینو">
+                <div class="product-info">
+                    <span class="product-category">قهوه گرم</span>
+                    <h3>کاپوچینو</h3>
+                    <p>ترکیب اسپرسو، شیر و فوم لطیف</p>
+                    <div class="product-bottom">
+                        <strong>۱۲۰,۰۰۰ تومان</strong>
+                        <button class="add-to-cart" data-name="کاپوچینو" data-price="120000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-product" data-category="hot">
+                <img src="assets/images/Latte.png"
+                     alt="لاته">
+                <div class="product-info">
+                    <span class="product-category">قهوه گرم</span>
+                    <h3>کافه لاته</h3>
+                    <p>اسپرسو با شیر بخار داده‌شده</p>
+                    <div class="product-bottom">
+                        <strong>۱۳۵,۰۰۰ تومان</strong>
+                        <button class="add-to-cart" data-name="کافه لاته" data-price="135000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-product" data-category="cold">
+                <img src="assets/images/Iced Americano.png"
+                     alt="آیس کافی">
+                <div class="product-info">
+                    <span class="product-category">قهوه سرد</span>
+                    <h3>آیس کافی</h3>
+                    <p>قهوه خنک برای روزهای گرم</p>
+                    <div class="product-bottom">
+                        <strong>۱۴۰,۰۰۰ تومان</strong>
+                        <button class="add-to-cart" data-name="آیس کافی" data-price="140000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-product" data-category="cold">
+                <img src="assets/images/Iced Latte.png"
+                     alt="آیس لاته">
+                <div class="product-info">
+                    <span class="product-category">قهوه سرد</span>
+                    <h3>آیس لاته</h3>
+                    <p>ترکیب شیر، اسپرسو و یخ</p>
+                    <div class="product-bottom">
+                        <strong>۱۵۰,۰۰۰ تومان</strong>
+                        <button class="add-to-cart" data-name="آیس لاته" data-price="150000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-product" data-category="drink">
+                <img src="assets/images/mohito.png"
+                     alt="موهیتو">
+                <div class="product-info">
+                    <span class="product-category">نوشیدنی</span>
+                    <h3>موهیتو</h3>
+                    <p>نوشیدنی خنک با طعم نعناع و لیمو</p>
+                    <div class="product-bottom">
+                        <strong>۱۳۰,۰۰۰ تومان</strong>
+                        <button class="add-to-cart" data-name="موهیتو" data-price="130000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-product" data-category="dessert">
+                <img src="assets/images/Chocolate Brownie.png"
+                     alt="کیک شکلاتی">
+                <div class="product-info">
+                    <span class="product-category">دسر</span>
+                    <h3>کیک شکلاتی</h3>
+                    <p>کیک شکلاتی با بافتی نرم و خوشمزه</p>
+                    <div class="product-bottom">
+                        <strong>۱۶۰,۰۰۰ تومان</strong>
+                        <button class="add-to-cart" data-name="کیک شکلاتی" data-price="160000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-product" data-category="dessert">
+                <img src="assets/images/cheesecake.png"
+                     alt="چیزکیک">
+                <div class="product-info">
+                    <span class="product-category">دسر</span>
+                    <h3>چیزکیک</h3>
+                    <p>چیزکیک لطیف با طعمی دلنشین</p>
+                    <div class="product-bottom">
+                        <strong>۱۸۰,۰۰۰ تومان</strong>
+                        <button class="add-to-cart" data-name="چیزکیک" data-price="180000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-product" data-category="dessert">
+                <img src="assets/images/croissant.png"
+                     alt="کروسان">
+                <div class="product-info">
+                    <span class="product-category">دسر</span>
+                    <h3>کروسان</h3>
+                    <p>کروسان لطیف با طعمی دلنشین</p>
+                    <div class="product-bottom">
+                        <strong>۱۸۰,۰۰۰ تومان</strong>
+                        <button class="add-to-cart" data-name="کروسان" data-price="180000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="cart-panel" id="cartPanel">
+            <div class="cart-header">
+                <h2><i class="fas fa-shopping-bag"></i> سبد خرید</h2>
+                <button id="closeCart" aria-label="بستن سبد خرید">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div id="cartItems" class="cart-items">
+                <p class="cart-empty">هنوز محصولی انتخاب نکرده‌ای.</p>
+            </div>
+
+            <div class="cart-total">
+                <span>مبلغ کل:</span>
+                <strong id="cartTotal">۰ تومان</strong>
+            </div>
+        </section>
+
+        <footer class="reservation-footer">
+            <p>© 2026 کافه تلخین | لحظاتی به‌یادماندنی با طعم قهوه</p>
+        </footer>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

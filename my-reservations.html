@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>رزروهای من | کافه تلخین</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<main class="my-reservations-page">
+
+    <!-- Header -->
+    <header class="reservation-header">
+
+        <a href="landing.html" class="back-link">
+            <i class="fas fa-arrow-right"></i>
+            بازگشت به سایت
+        </a>
+
+        <div class="reservation-brand">
+            <i class="fas fa-mug-hot"></i>
+            <span>کافه تلخین</span>
+        </div>
+
+        <a href="reservation.html" class="header-reservation-btn">
+            <i class="fas fa-plus"></i>
+            رزرو جدید
+        </a>
+
+    </header>
+
+
+    <section class="my-reservations-container">
+
+        <!-- Page Title -->
+        <div class="my-reservations-title">
+
+            <div class="reservation-icon">
+                <i class="fas fa-calendar-check"></i>
+            </div>
+
+            <h1>رزروهای من</h1>
+
+            <p>
+                درخواست‌های رزرو خود را مشاهده و وضعیت آن‌ها را پیگیری کنید.
+            </p>
+
+        </div>
+
+
+        <!-- Statistics -->
+        <div class="reservation-summary">
+
+            <div class="summary-item">
+                <div class="summary-icon total-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+
+                <div>
+                    <span>مجموع رزروها</span>
+                    <strong id="totalReservations">0</strong>
+                </div>
+            </div>
+
+
+            <div class="summary-item">
+                <div class="summary-icon pending-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+
+                <div>
+                    <span>در انتظار تأیید</span>
+                    <strong id="pendingReservations">0</strong>
+                </div>
+            </div>
+
+
+            <div class="summary-item">
+                <div class="summary-icon approved-icon">
+                    <i class="fas fa-circle-check"></i>
+                </div>
+
+                <div>
+                    <span>تأیید شده</span>
+                    <strong id="approvedReservations">0</strong>
+                </div>
+            </div>
+
+
+            <div class="summary-item">
+                <div class="summary-icon rejected-icon">
+                    <i class="fas fa-circle-xmark"></i>
+                </div>
+
+                <div>
+                    <span>رد شده</span>
+                    <strong id="rejectedReservations">0</strong>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Reservation Filters -->
+        <div class="reservations-toolbar">
+
+            <div class="reservations-toolbar-title">
+                <h2>تاریخچه رزروها</h2>
+                <span>وضعیت درخواست‌های شما</span>
+            </div>
+
+            <div class="reservation-filters">
+
+                <button class="reservation-filter active" data-filter="all">
+                    همه
+                </button>
+
+                <button class="reservation-filter" data-filter="در انتظار تأیید">
+                    در انتظار
+                </button>
+
+                <button class="reservation-filter" data-filter="تأیید شده">
+                    تأیید شده
+                </button>
+
+                <button class="reservation-filter" data-filter="رد شده">
+                    رد شده
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Reservations List -->
+        <div class="reservations-list" id="reservationsList">
+
+            <!-- اطلاعات رزروها با JavaScript نمایش داده می‌شود -->
+
+        </div>
+
+
+        <!-- Empty State -->
+        <div class="empty-reservations" id="emptyReservations">
+
+            <div class="empty-reservations-icon">
+                <i class="fas fa-calendar-xmark"></i>
+            </div>
+
+            <h3>هنوز رزروی ثبت نکرده‌اید!</h3>
+
+            <p>
+                برای تجربه لحظاتی خوش در کافه تلخین،
+                اولین رزرو خود را ثبت کنید.
+            </p>
+
+            <a href="reservation.html" class="reservation-btn">
+                ثبت رزرو جدید
+                <i class="fas fa-arrow-left"></i>
+            </a>
+
+        </div>
+
+
+        <!-- New Reservation -->
+        <div class="new-reservation-link">
+
+            <a href="reservation.html">
+                <i class="fas fa-plus"></i>
+                ثبت درخواست رزرو جدید
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer class="reservation-footer">
+        <p>© 2026 کافه تلخین | لحظاتی به‌یادماندنی با طعم قهوه</p>
+    </footer>
+
+</main>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

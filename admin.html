@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل مدیریت | کافه تلخین</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="admin-page">
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+
+        <div class="admin-logo">
+            <i class="fa-solid fa-mug-hot"></i>
+            <span>کافه تلخین</span>
+        </div>
+
+        <div class="admin-profile">
+            <div class="admin-avatar">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div>
+                <h4>مدیر کافه</h4>
+                <span>مدیر سیستم</span>
+            </div>
+        </div>
+
+        <nav class="admin-nav">
+
+            <a href="#dashboard" class="admin-nav-link active">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>داشبورد</span>
+            </a>
+
+            <a href="#reservations" class="admin-nav-link">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>مدیریت رزروها</span>
+            </a>
+
+            <a href="#tables" class="admin-nav-link">
+    <i class="fa-solid fa-chair"></i>
+    <span>مدیریت میزها</span>
+</a>
+
+            <a href="#customers" class="admin-nav-link">
+                <i class="fa-solid fa-users"></i>
+                <span>مشتریان</span>
+            </a>
+
+            <a href="#reports" class="admin-nav-link">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>گزارش‌ها</span>
+            </a>
+
+        </nav>
+
+        <div class="admin-sidebar-footer">
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                بازگشت به سایت
+            </a>
+
+            <a href="index.html">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                خروج
+            </a>
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="admin-main">
+
+        <!-- Header -->
+        <header class="admin-header">
+
+            <div>
+                <h2>داشبورد مدیریت</h2>
+                <p>به پنل مدیریت کافه تلخین خوش آمدید.</p>
+            </div>
+
+            <div class="admin-header-actions">
+                <button class="admin-notification">
+                    <i class="fa-regular fa-bell"></i>
+                </button>
+
+                <div class="admin-header-user">
+                    <i class="fa-solid fa-user-circle"></i>
+                    <span>مدیر کافه</span>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- Dashboard -->
+        <section class="admin-section" id="dashboard">
+
+            <div class="admin-section-title">
+                <h3>خلاصه وضعیت</h3>
+                <span>نمای کلی عملکرد کافه</span>
+            </div>
+
+            <div class="admin-stats">
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <div>
+                        <span>کل رزروها</span>
+                        <h3 id="totalReservations">0</h3>
+                    </div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon pending">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div>
+                        <span>در انتظار تأیید</span>
+                        <h3 id="pendingReservations">0</h3>
+                    </div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon approved">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div>
+                        <span>رزروهای تأییدشده</span>
+                        <h3 id="approvedReservations">0</h3>
+                    </div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon customers">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div>
+                        <span>تعداد مشتریان</span>
+                        <h3 id="totalCustomers">0</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Reservations -->
+        <section class="admin-section" id="reservations">
+
+            <div class="admin-section-title">
+                <div>
+                    <h3>مدیریت رزروها</h3>
+                    <span>بررسی و مدیریت درخواست‌های رزرو</span>
+                </div>
+
+                <button class="admin-refresh-btn" id="refreshReservations">
+                    <i class="fa-solid fa-rotate"></i>
+                    بروزرسانی
+                </button>
+            </div>
+
+            <div class="admin-table-wrapper">
+
+                <table class="admin-table">
+
+                    <thead>
+                        <tr>
+                            <th>نام مشتری</th>
+                            <th>شماره موبایل</th>
+                            <th>تاریخ</th>
+                            <th>ساعت</th>
+                            <th>تعداد نفرات</th>
+                            <th>محدوده</th>
+                            <th>شماره میز</th>
+                            <th>وضعیت</th>
+                            <th>عملیات</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="adminReservationsList">
+                        <tr>
+                            <td colspan="8" class="admin-empty">
+                                در حال دریافت اطلاعات...
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        
+<!-- Tables Management -->
+<section class="admin-section" id="tables">
+
+    <div class="admin-section-title">
+        <div>
+            <h3>مدیریت میزها</h3>
+            <span>تعریف و مدیریت میزهای کافه</span>
+        </div>
+    </div>
+
+    <!-- Table Statistics -->
+    <div class="admin-stats">
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon">
+                <i class="fa-solid fa-chair"></i>
+            </div>
+            <div>
+                <span>تعداد کل میزها</span>
+                <h3 id="totalTables">0</h3>
+            </div>
+        </div>
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon approved">
+                <i class="fa-solid fa-users"></i>
+            </div>
+            <div>
+                <span>ظرفیت کل کافه</span>
+                <h3 id="totalTableCapacity">0</h3>
+            </div>
+        </div>
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon pending">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div>
+                <span>میزهای فعال</span>
+                <h3 id="activeTables">0</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Add Table Form -->
+    <div class="admin-table-form-wrapper">
+
+        <h3>افزودن میز جدید</h3>
+
+        <form id="addTableForm" class="admin-table-form">
+
+            <div class="admin-form-group">
+                <label for="tableNumber">شماره میز</label>
+                <input
+                    type="number"
+                    id="tableNumber"
+                    min="1"
+                    placeholder="مثلاً 1"
+                    required
+                >
+            </div>
+
+
+<div class="admin-form-group">
+    <label for="tableArea">محدوده قرارگیری میز</label>
+    <select id="tableArea" required>
+        <option value="">انتخاب محدوده</option>
+        <option value="indoor">فضای داخلی</option>
+        <option value="window">کنار پنجره</option>
+        <option value="outdoor">فضای بیرونی</option>
+    </select>
+</div>
+
+
+            <div class="admin-form-group">
+                <label for="tableCapacity">ظرفیت میز (نفر)</label>
+                <input
+                    type="number"
+                    id="tableCapacity"
+                    min="1"
+                    max="20"
+                    placeholder="مثلاً 4"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="admin-refresh-btn">
+                <i class="fa-solid fa-plus"></i>
+                افزودن میز
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- Tables List -->
+    <div class="admin-section-title">
+        <div>
+            <h3>فهرست میزهای کافه</h3>
+            <span>مشاهده و مدیریت میزهای تعریف‌شده</span>
+        </div>
+    </div>
+
+    <div class="admin-table-wrapper">
+
+        <table class="admin-table">
+
+            
+<thead>
+    <tr>
+        <th>شماره میز</th>
+        <th>ظرفیت (نفر)</th>
+        <th>محدوده</th>
+        <th>وضعیت</th>
+        <th>عملیات</th>
+    </tr>
+</thead>
+
+<tbody id="adminTablesList">
+    <tr>
+        <td colspan="5" class="admin-empty">
+            هنوز میزی تعریف نشده است.
+        </td>
+    </tr>
+</tbody>
+
+
+        </table>
+
+    </div>
+
+</section>
+
+
+
+      
+        
+<!-- Customers -->
+<section class="admin-section" id="customers">
+
+    <div class="admin-section-title">
+        <div>
+            <h3>مدیریت مشتریان</h3>
+            <span>اطلاعات مشتریان دارای رزرو</span>
+        </div>
+
+        <button class="admin-refresh-btn" id="refreshCustomers">
+            <i class="fa-solid fa-rotate"></i>
+            بروزرسانی
+        </button>
+    </div>
+
+    <div class="admin-stats customer-stats">
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon customers">
+                <i class="fa-solid fa-users"></i>
+            </div>
+            <div>
+                <span>تعداد مشتریان</span>
+                <h3 id="customersCount">0</h3>
+            </div>
+        </div>
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon approved">
+                <i class="fa-solid fa-calendar-check"></i>
+            </div>
+            <div>
+                <span>مجموع رزروها</span>
+                <h3 id="customersReservationsCount">0</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="admin-table-wrapper">
+
+        <table class="admin-table">
+
+            <thead>
+                <tr>
+                    <th>ردیف</th>
+                    <th>نام مشتری</th>
+                    <th>شماره موبایل</th>
+                    <th>تعداد رزروها</th>
+                    <th>آخرین تاریخ رزرو</th>
+                </tr>
+            </thead>
+
+            <tbody id="adminCustomersList">
+                <tr>
+                    <td colspan="5" class="admin-empty">
+                        در حال دریافت اطلاعات...
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+
+        <!-- Reports -->
+        <section class="admin-section" id="reports">
+
+            <div class="admin-section-title">
+                <div>
+                    <h3>گزارش‌ها</h3>
+                    <span>آمار عملکرد کافه</span>
+                </div>
+            </div>
+
+            <div class="admin-placeholder">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>گزارش عملکرد</h3>
+                <p>نمودارها و گزارش‌های آماری در مرحله بعد اضافه می‌شوند.</p>
+            </div>
+
+        </section>
+
+        <footer class="admin-footer">
+            © تمامی حقوق برای کافه تلخین محفوظ است.
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
+```
